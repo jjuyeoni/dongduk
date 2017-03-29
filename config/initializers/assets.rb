@@ -11,7 +11,7 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( bootstrap/css/bootstrap.scss )
 Rails.application.config.assets.precompile += %w( agency.scss )
-Rails.application.config.assets.precompile += %w( font-awesome/scss/font-awesome.scss )
+Rails.application.config.assets.precompile += %w( font-awesome/css/font-awesome.scss )
 Rails.application.config.assets.precompile += %w( font-awesome/scss/_variables.scss )
 
 Rails.application.config.assets.precompile += %w( jquery/jquery.min.js )

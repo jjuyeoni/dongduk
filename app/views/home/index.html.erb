@@ -7,24 +7,21 @@
             <div class="intro-text">
                 <!--<div class="intro-lead-in">Welcome To Our Studio!</div>-->
                 <div class="intro-heading">동덕인GO</div>
-                <a href="/users/sign_out" style="color:#fed136;">SIGN OUT</a>
                 <br>
                 <% @students.each do |s| %>
                 <h3>정족수 : <%= s.number %></h3>
                 <% end %>
                 <% if user_signed_in? %>
-                    <% if current_user.email == 'cwa302@naver.com' %>
+                    <% if current_user.email == 'admin@dongduk.ac.kr' %>
                     <form action="/home/stu" method="post">
                         <div class="row">
-                            <input type="hidden" name="id_of_stu" value="1">
-                            <input type="text" class="stu-form" name="stu_number">
-                            <button type="submit" class="btn btn-default">Submit</button>
+                            <input type="number" class="stu-form" name="number">
+                            <button type="submit sbutton" class="btn btn-default">SUBMIT</button>
                         </div>
                     </form>
                     <% end %>
                 <% end %>
                 <h3>가입자 수 : <%=User.count%></h3>
-                <!--<a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>-->
             </div>
         </div>
     </header>
@@ -44,14 +41,14 @@
                     <input type="text" class="form-control" id="exampleInputEmail1" name="content" placeholder="입력해주세요.">
                   </div>
                   <div class="col-sm-1 col-xs-3">
-                      <button type="submit" class="btn btn-default">Submit</button>
+                      <button type="submit" class="btn btn-default">올리기</button>
                     </div>
                 </form>
             </div>
             <div class="row">
                 <div class="form-group col-sm-11 col-xs-9" >
                 <% @comments.each do |c| %>
-                <p><%= c.user.name %> || <%= c.content %></p>
+                <p><%= c.user.name %> >> <%= c.content %></p>
                 <% end %>
                 </div>
             </div>

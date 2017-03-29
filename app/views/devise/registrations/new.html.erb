@@ -1,23 +1,25 @@
+<div align="center" style="margin: 100px;">
 <h2>Sign up</h2>
-
+<h3>동덕 학생총회</h3>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
+<div style="padding: 20px;">
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
-  
+ </div>
+ <div style="padding: 20px;">
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
-  
+  </div>
   <div class="field">
     <%= f.label :학번 %><br />
     <%= f.text_field :number %>
   </div>
-
+<div style="padding: 20px;">
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
@@ -25,15 +27,18 @@
     <% end %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
-
+</div>
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <button style="background-color: rgba(255, 185, 20 , 0.3); margin: 25px; test-align: center;
+                  border-radius: 50px 50px 50px 50px; height: 40px; width: 80px;"><%= f.submit "Sign up"%></button>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
+<button style="background-color: rgba(255, 255, 255 , 0.2);test-align: center;
+                  border-radius: 50px 50px 50px 50px; height: 40px; width: 80px; color: #E7E7E7;">
+<%= render "devise/shared/links" %></button>
+</div>

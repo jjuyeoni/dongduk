@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   before_action :require_login, only:[:write]
   def index
     @comments = Comment.last(30).reverse
-    @students = Student.all
+    @students = Student.last(1).reverse
   end
   
   def write
@@ -13,8 +13,7 @@ class HomeController < ApplicationController
   end
   
   def stu
-    stu = Student.find(params[:id_of_stu])
-    stu.number = params[:stu_number]
+    stu = Student.new(number: params[:number])
     stu.save
     redirect_to '/home/index'
   end

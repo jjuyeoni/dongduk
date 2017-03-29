@@ -275,7 +275,7 @@ header .intro-text .intro-heading {
     margin-bottom: 25px;
   }
   header .intro-text .intro-heading {
-    font-family: 'Nanum Brush Script', serif;
+    font-family: 'Nanum Brush Script', 'Jeju Gothic',serif;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 200px;
@@ -752,4 +752,12 @@ body {
 }
 .stu-form {
   color: black;
+}
+
+.sbutton {
+    border-color: white; 
+    color: white; 
+    background-color: transparent;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
 }
